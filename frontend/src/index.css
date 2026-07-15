@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@layer base {
+  :root {
+    --industrial-bg: #0A1226;
+    --industrial-surface: #0f1a30;
+    --industrial-surface-2: #142038;
+    --industrial-accent: #4D7FFF;
+    --industrial-accent-dim: rgba(77, 127, 255, 0.15);
+    --industrial-border: rgba(255, 255, 255, 0.1);
+    --industrial-border-strong: rgba(255, 255, 255, 0.2);
+    --industrial-text: #F0F2F8;
+    --industrial-text-dim: #8A95B0;
+    --industrial-text-muted: #5A6480;
+    --industrial-positive: #22C55E;
+    --industrial-warning: #F59E0B;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--industrial-bg);
+    color: var(--industrial-text);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: Georgia, "Times New Roman", serif;
+  }
+}
+
+@layer utilities {
+  .industrial-border {
+    border: 1px solid var(--industrial-border);
+  }
+  .font-data {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+  }
+  .font-authority {
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  .text-accent {
+    color: var(--industrial-accent);
+  }
+  .bg-surface {
+    background-color: var(--industrial-surface);
+  }
+  .bg-surface-2 {
+    background-color: var(--industrial-surface-2);
+  }
+  .hover-row:hover {
+    background-color: rgba(77, 127, 255, 0.06);
+  }
+  .btn-depress:active {
+    transform: translateY(1px);
+  }
+  .spec-table td,
+  .spec-table th {
+    padding: 0.5rem 0;
+  }
+}

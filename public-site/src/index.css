@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 222 54% 9%;
+    --foreground: 0 0% 96%;
+    --card: 222 50% 11%;
+    --card-foreground: 0 0% 96%;
+    --popover: 222 50% 11%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 224 100% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 40% 16%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 222 40% 14%;
+    --muted-foreground: 220 15% 55%;
+    --accent: 224 100% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 30% 20%;
+    --input: 222 40% 16%;
+    --ring: 224 100% 65%;
+    --chart-1: 224 100% 65%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0rem;
+    --sidebar-background: 222 54% 9%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 224 100% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 40% 16%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 222 30% 20%;
+    --sidebar-ring: 224 100% 65%;
+
+    /* Industrial custom tokens */
+    --industrial-bg: #0A1226;
+    --industrial-surface: #0f1a30;
+    --industrial-surface-2: #142038;
+    --industrial-accent: #4D7FFF;
+    --industrial-accent-dim: rgba(77,127,255,0.15);
+    --industrial-border: rgba(255,255,255,0.1);
+    --industrial-border-strong: rgba(255,255,255,0.2);
+    --industrial-text: #F0F2F8;
+    --industrial-text-dim: #8A95B0;
+    --industrial-text-muted: #5A6480;
+    --industrial-positive: #22C55E;
+    --industrial-warning: #F59E0B;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #0A1226;
+    color: #F0F2F8;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+}
+
+/* Industrial utility classes */
+@layer utilities {
+  .industrial-border {
+    border: 1px solid var(--industrial-border);
+  }
+  .industrial-border-strong {
+    border: 1px solid var(--industrial-border-strong);
+  }
+  .font-data {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  .font-authority {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .text-accent {
+    color: var(--industrial-accent);
+  }
+  .bg-surface {
+    background-color: var(--industrial-surface);
+  }
+  .bg-surface-2 {
+    background-color: var(--industrial-surface-2);
+  }
+  .hover-row:hover {
+    background-color: rgba(77, 127, 255, 0.06);
+  }
+  .btn-depress:active {
+    transform: translateY(1px);
+    box-shadow: none;
+  }
+  .spec-table td, .spec-table th {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
