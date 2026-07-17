@@ -46,10 +46,4 @@ export default defineConfig(() => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  server: {
-    proxy: {
-      '/admin': { target: 'http://localhost:5174', changeOrigin: true }
-    },
-    allowedHosts: ['uxpilot.net','host.uxpilot.net','dev.host.uxpilot.net', 'uxpilot.ai', 'localhost', '127.0.0.1'],
-  },
 }));
